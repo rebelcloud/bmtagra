@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMT | Precision Machine Tooling Catalog</title>
+    <title>BMT | Gold Chain Shaping Tools Catalog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #D4AF37; --dark: #121212; --grey: #1f1f1f; --white: #ffffff; }
@@ -14,20 +14,33 @@
         .logo-wrap { display: flex; align-items: center; text-decoration: none; color: white; }
         .bmt-logo { width: 45px; height: 45px; border: 2px solid var(--gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 12px; color: var(--gold); font-weight: bold; }
         
-        /* Search Bar for 30+ Products */
+        /* Search Bar */
         .search-container { padding: 40px 5%; text-align: center; background: #1a1a1a; }
-        #toolSearch { width: 100%; max-width: 600px; padding: 15px; border-radius: 30px; border: 1px solid var(--gold); background: #000; color: white; font-size: 16px; }
+        #toolSearch { width: 100%; max-width: 600px; padding: 15px; border-radius: 30px; border: 1px solid var(--gold); background: #000; color: white; font-size: 16px; outline: none; transition: 0.3s; }
+        #toolSearch:focus { box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
 
         /* Catalog Grid */
         .container { padding: 40px 5%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: var(--grey); border: 1px solid #333; border-radius: 8px; overflow: hidden; transition: 0.3s; }
-        .card:hover { border-color: var(--gold); }
-        .tool-img { width: 100%; height: 180px; background: #222; object-fit: cover; }
-        .card-body { padding: 15px; }
-        .card h3 { color: var(--gold); font-size: 1.1rem; margin: 0 0 10px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: var(--grey); border: 1px solid #333; border-radius: 8px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        
+        /* Image Styling for Tools */
+        .tool-img { width: 100%; height: 220px; background: #ffffff; object-fit: cover; object-position: center; border-bottom: 3px solid var(--gold); }
+        
+        .card-body { padding: 20px; text-align: center; }
+        .card h3 { color: var(--gold); font-size: 1.2rem; margin: 0 0 10px 0; }
+        .card p { font-size: 0.9rem; color: #aaa; margin-bottom: 20px; line-height: 1.4; }
 
-        .btn-wa { display: block; text-align: center; background: var(--gold); color: black; padding: 10px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 13px; }
+        .btn-wa { display: block; text-align: center; background: var(--gold); color: black; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px; transition: 0.2s; }
+        .btn-wa:hover { background: #fff; color: #000; }
+        .btn-wa i { margin-right: 8px; font-size: 16px; }
+
+        /* PDF Button */
+        .pdf-section { text-align: center; padding: 40px 20px; background: #1a1a1a; border-top: 1px solid #333; }
+        .btn-pdf { display: inline-block; background: transparent; color: var(--gold); border: 2px solid var(--gold); padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; font-size: 14px; }
+        .btn-pdf:hover { background: var(--gold); color: black; }
+        .btn-pdf i { margin-right: 10px; }
     </style>
 </head>
 <body>
@@ -38,65 +51,108 @@
             <div><b style="font-size: 18px;">BRAJ MACHINE TOOLS</b></div>
         </a>
         <div>
-            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">BACK TO HOME</a>
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold; font-size: 14px;">BACK TO HOME</a>
         </div>
     </nav>
 
     <div class="search-container">
-        <h1>Machine Tooling Catalog</h1>
-        <input type="text" id="toolSearch" placeholder="Search by machine model (Sisma, Fasti, Ombi)..." onkeyup="filterTools()">
+        <h1 style="color: var(--gold); margin-bottom: 10px;">Gold Chain Shaping Tools Catalog</h1>
+        <p style="color: #aaa; margin-bottom: 20px;">Premium components for gold chain making machines</p>
+        <input type="text" id="toolSearch" placeholder="Search tools (e.g., Figaro, Ball Die, Pushers)..." onkeyup="filterTools()">
     </div>
 
     <div class="container">
         <div class="grid" id="toolGrid">
-            <div class="card" data-name="Sisma Ombi Fasti Curb Cable 0.2mm">
-                <div class="tool-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#D4AF37;font-weight:bold;font-size:14px;text-align:center;padding:20px;">
-                    <div><i class="fas fa-wrench" style="font-size:40px;display:block;margin-bottom:10px;"></i>Sisma/Ombi Tool Set</div>
-                </div>
+            
+            <div class="card" data-name="MGZ Figaro 0.40mm Complete Tool Set">
+                <img src="mgz-figaro-040mm-set.jpeg" alt="MGZ Figaro 0.40mm" class="tool-img">
                 <div class="card-body">
-                    <h3>Sisma/Ombi Set (0.2-0.6mm)</h3>
-                    <a href="https://wa.me/919719411537" class="btn-wa">Order on WhatsApp</a>
+                    <h3>MGZ Figaro 0.40mm Set</h3>
+                    <p>Complete BMT 40 CC machine tool kit including mandrels, springs, and square bars.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20MGZ%20Figaro%200.40mm%20Complete%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="Fasti Box Chain FMV SFV">
-                <div class="tool-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:#D4AF37;font-weight:bold;font-size:14px;text-align:center;padding:20px;">
-                    <div><i class="fas fa-tools" style="font-size:40px;display:block;margin-bottom:10px;"></i>Fasti Box Chain Tools</div>
-                </div>
+            <div class="card" data-name="0.32mm Precision Machine Tooling Kit">
+                <img src="032mm-tooling-kit.jpeg" alt="0.32mm Kit" class="tool-img">
                 <div class="card-body">
-                    <h3>Fasti Box Chain Tools</h3>
-                    <a href="https://wa.me/919719411537" class="btn-wa">Order on WhatsApp</a>
+                    <h3>0.32mm Tooling Kit</h3>
+                    <p>High-precision 0.32mm flat blades, round pins, wedges, and angled cutter tools.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%200.32mm%20Precision%20Tooling%20Kit." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
+            <div class="card" data-name="Gold Chain Ball Forming Die Grooved Roller Block">
+                <img src="ball-forming-die-block.jpeg" alt="Ball Forming Die" class="tool-img">
+                <div class="card-body">
+                    <h3>Ball Forming Die Block</h3>
+                    <p>Heavy-duty grooved roller block with hemispherical indentations for ball chain manufacturing.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Ball%20Forming%20Die%20Block." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
             </div>
+
+            <div class="card" data-name="Micro Mandrel & Needle Guide Assembly">
+                <img src="micro-mandrel-guide.jpeg" alt="Micro Mandrel" class="tool-img">
+                <div class="card-body">
+                    <h3>Micro Mandrel & Guide</h3>
+                    <p>Threaded mandrel assembly with long needle wire guide for intricate chain linking.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Micro%20Mandrel%20and%20Needle%20Guide." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Precision Cutting Tips Forming Punches">
+                <img src="precision-cutting-tips.jpeg" alt="Cutting Tips" class="tool-img">
+                <div class="card-body">
+                    <h3>Precision Cutting Tips</h3>
+                    <p>Macro-machined miniature cutting and forming tips for high-speed chain machines.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Precision%20Cutting%20Tips." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Symmetrical Chain Link Bending Pushers">
+                <img src="symmetrical-link-pushers.jpeg" alt="Symmetrical Pushers" class="tool-img">
+                <div class="card-body">
+                    <h3>Symmetrical Link Pushers</h3>
+                    <p>Twin flat-tapered metal bending levers with semicircular grooved tips.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Symmetrical%20Link%20Pushers." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Asymmetrical Chain Link Bending Levers">
+                <img src="asymmetrical-link-levers.jpeg" alt="Asymmetrical Levers" class="tool-img">
+                <div class="card-body">
+                    <h3>Asymmetrical Link Levers</h3>
+                    <p>Offset chain link bending pushers designed for specialized interlocking patterns.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Asymmetrical%20Link%20Levers." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="High Precision Angled Cutter Blade">
+                <img src="angled-cutter-blade.jpeg" alt="Angled Cutter" class="tool-img">
+                <div class="card-body">
+                    <h3>Angled Cutter Blade</h3>
+                    <p>Tungsten-grade angled wedge tool for clean, burr-free gold wire cutting.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Angled%20Cutter%20Blade." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+            
+            <div class="card" data-name="Universal Flat Blade & Wire Guide Kit">
+                <img src="universal-blade-kit.jpeg" alt="Universal Kit" class="tool-img">
+                <div class="card-body">
+                    <h3>Universal Blade Kit</h3>
+                    <p>Comprehensive assortment of flat blades, wire pushers, and angled bits for setup tuning.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Universal%20Blade%20Kit." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-     <div style="text-align: center; padding: 20px; background: #1a1a1a; border-bottom: 1px solid #333;">
-    <a href="BMT-Catalog-2026.pdf" download class="btn-pdf">
-        <i class="fas fa-file-pdf"></i> DOWNLOAD FULL PRICE LIST (PDF)
-    </a>
-</div>
-
-<style>
-    .btn-pdf {
-        display: inline-block;
-        background: transparent;
-        color: #D4AF37;
-        border: 2px solid #D4AF37;
-        padding: 12px 25px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: 0.3s;
-        font-size: 14px;
-    }
-    .btn-pdf:hover {
-        background: #D4AF37;
-        color: black;
-    }
-    .btn-pdf i { margin-right: 10px; }
-</style>
+    <div class="pdf-section">
+        <a href="BMT-Catalog-2026.pdf" download class="btn-pdf">
+            <i class="fas fa-file-pdf"></i> DOWNLOAD FULL PRICE LIST (PDF)
+        </a>
+    </div>
 
     <script>
         function filterTools() {
