@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMT | Gold Chain Shaping Tools Catalog</title>
+    <title>BMT | Machine Tools Catalog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #D4AF37; --dark: #121212; --grey: #1f1f1f; --white: #ffffff; }
@@ -26,9 +26,9 @@
         .card:hover { border-color: var(--gold); transform: translateY(-5px); }
         
         /* Image Styling for Tools */
-        .tool-img { width: 100%; height: 220px; background: #ffffff; object-fit: cover; object-position: center; border-bottom: 3px solid var(--gold); }
+        .tool-img { width: 100%; height: 240px; background: #ffffff; object-fit: contain; object-position: center; border-bottom: 3px solid var(--gold); display: block; }
         
-        .card-body { padding: 20px; text-align: center; }
+        .card-body { padding: 20px; text-align: center; 
         .card h3 { color: var(--gold); font-size: 1.2rem; margin: 0 0 10px 0; }
         .card p { font-size: 0.9rem; color: #aaa; margin-bottom: 20px; line-height: 1.4; }
 
@@ -56,102 +56,166 @@
     </nav>
 
     <div class="search-container">
-        <h1 style="color: var(--gold); margin-bottom: 10px;">Gold Chain Shaping Tools Catalog</h1>
+        <h1 style="color: var(--gold); margin-bottom: 10px;">Machine Tools Catalog</h1>
         <p style="color: #aaa; margin-bottom: 20px;">Premium components for gold chain making machines</p>
         <input type="text" id="toolSearch" placeholder="Search tools (e.g., Figaro, Ball Die, Pushers)..." onkeyup="filterTools()">
     </div>
 
     <div class="container">
         <div class="grid" id="toolGrid">
-            
-            <div class="card" data-name="MGZ Figaro 0.40mm Complete Tool Set">
-                <img src="mgz-figaro-040mm-set.jpeg" alt="MGZ Figaro 0.40mm" class="tool-img">
+            <div class="card" data-name="MGZ Curb Figaro">
+                <img src="MGZ%20Curb%20Figaro.jpeg" alt="MGZ Curb Figaro" class="tool-img">
                 <div class="card-body">
-                    <h3>MGZ Figaro 0.40mm Set</h3>
-                    <p>Complete BMT 40 CC machine tool kit including mandrels, springs, and square bars.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20MGZ%20Figaro%200.40mm%20Complete%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>MGZ Curb Figaro</h3>
+                    <p>Complete tool set for MGZ curb and Figaro style chain production.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20MGZ%20Curb%20Figaro%20tool%20set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="0.32mm Precision Machine Tooling Kit">
-                <img src="032mm-tooling-kit.jpeg" alt="0.32mm Kit" class="tool-img">
+            <div class="card" data-name="FMV Box Full Set">
+                <img src="FMV%20Box%20Full%20Set.jpeg" alt="FMV Box Full Set" class="tool-img">
                 <div class="card-body">
-                    <h3>0.32mm Tooling Kit</h3>
-                    <p>High-precision 0.32mm flat blades, round pins, wedges, and angled cutter tools.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%200.32mm%20Precision%20Tooling%20Kit." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>FMV Box Full Set</h3>
+                    <p>Full FMV component set for tool boxes, jaws, and forming units.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20FMV%20Box%20Full%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="Gold Chain Ball Forming Die Grooved Roller Block">
-                <img src="ball-forming-die-block.jpeg" alt="Ball Forming Die" class="tool-img">
+            <div class="card" data-name="FMV Box (Jaws)">
+                <img src="FMV%20Box%28Jaws%29%20.jpeg" alt="FMV Box Jaws" class="tool-img">
                 <div class="card-body">
-                    <h3>Ball Forming Die Block</h3>
-                    <p>Heavy-duty grooved roller block with hemispherical indentations for ball chain manufacturing.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Ball%20Forming%20Die%20Block." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>FMV Box (Jaws)</h3>
+                    <p>Specialized FMV jaw set for accurate link shaping and annealing.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20FMV%20Box%20Jaws." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="Micro Mandrel & Needle Guide Assembly">
-                <img src="micro-mandrel-guide.jpeg" alt="Micro Mandrel" class="tool-img">
+            <div class="card" data-name="FMV L Box Laser Hammer">
+                <img src="FMV%20L%20Box%20Laser%20Hammer.jpeg" alt="FMV L Box Laser Hammer" class="tool-img">
                 <div class="card-body">
-                    <h3>Micro Mandrel & Guide</h3>
-                    <p>Threaded mandrel assembly with long needle wire guide for intricate chain linking.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Micro%20Mandrel%20and%20Needle%20Guide." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>FMV L Box Laser Hammer</h3>
+                    <p>Laser hammer tooling for fine finishing and hardening on gold chain links.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20FMV%20L%20Box%20Laser%20Hammer." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="Precision Cutting Tips Forming Punches">
-                <img src="precision-cutting-tips.jpeg" alt="Cutting Tips" class="tool-img">
+            <div class="card" data-name="Indian Side Anchor Tool Set (FTP)">
+                <img src="Indian%20Side%20Anchor%20Tool%20Set%28FTP%29.jpeg" alt="Indian Side Anchor Tool Set FTP" class="tool-img">
                 <div class="card-body">
-                    <h3>Precision Cutting Tips</h3>
-                    <p>Macro-machined miniature cutting and forming tips for high-speed chain machines.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Precision%20Cutting%20Tips." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>Indian Side Anchor Tool Set (FTP)</h3>
+                    <p>Side anchor tooling made for FTP machines and precision link placement.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Indian%20Side%20Anchor%20Tool%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="Symmetrical Chain Link Bending Pushers">
-                <img src="symmetrical-link-pushers.jpeg" alt="Symmetrical Pushers" class="tool-img">
+            <div class="card" data-name="Indian Top Cut Tool Set">
+                <img src="Indian%20Top%20Cut%20Tool%20Set.jpeg" alt="Indian Top Cut Tool Set" class="tool-img">
                 <div class="card-body">
-                    <h3>Symmetrical Link Pushers</h3>
-                    <p>Twin flat-tapered metal bending levers with semicircular grooved tips.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Symmetrical%20Link%20Pushers." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>Indian Top Cut Tool Set</h3>
+                    <p>Top cut tool kit for precise edge shaping on gold chain links.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Indian%20Top%20Cut%20Tool%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="Asymmetrical Chain Link Bending Levers">
-                <img src="asymmetrical-link-levers.jpeg" alt="Asymmetrical Levers" class="tool-img">
+            <div class="card" data-name="Sisma SGW Tool Set">
+                <img src="Sisma%20SGW%20Tool%20Set.jpeg" alt="Sisma SGW Tool Set" class="tool-img">
                 <div class="card-body">
-                    <h3>Asymmetrical Link Levers</h3>
-                    <p>Offset chain link bending pushers designed for specialized interlocking patterns.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Asymmetrical%20Link%20Levers." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>Sisma SGW Tool Set</h3>
+                    <p>Complete SGW tool set designed for precision chain forming machines.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Sisma%20SGW%20Tool%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
-            <div class="card" data-name="High Precision Angled Cutter Blade">
-                <img src="angled-cutter-blade.jpeg" alt="Angled Cutter" class="tool-img">
+            <div class="card" data-name="Sisma SFV Box Full set">
+                <img src="Sisma%20SFV%20Box%20Full%20set.jpeg" alt="Sisma SFV Box Full Set" class="tool-img">
                 <div class="card-body">
-                    <h3>Angled Cutter Blade</h3>
-                    <p>Tungsten-grade angled wedge tool for clean, burr-free gold wire cutting.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Angled%20Cutter%20Blade." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
-                </div>
-            </div>
-            
-            <div class="card" data-name="Universal Flat Blade & Wire Guide Kit">
-                <img src="universal-blade-kit.jpeg" alt="Universal Kit" class="tool-img">
-                <div class="card-body">
-                    <h3>Universal Blade Kit</h3>
-                    <p>Comprehensive assortment of flat blades, wire pushers, and angled bits for setup tuning.</p>
-                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Universal%20Blade%20Kit." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                    <h3>Sisma SFV Box Full Set</h3>
+                    <p>Full SFV box kit for heavy-duty chain forming and finishing.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Sisma%20SFV%20Box%20Full%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
                 </div>
             </div>
 
+            <div class="card" data-name="SGW TP Facon">
+                <img src="SGW%20TP%20Facon.jpeg" alt="SGW TP Facon" class="tool-img">
+                <div class="card-body">
+                    <h3>SGW TP Facon</h3>
+                    <p>Facon tooling for SGW TP machines and fine jewellery link finishes.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20SGW%20TP%20Facon%20tool." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="SGW TP Full Set">
+                <img src="SGW%20TP%20Full%20Set.jpeg" alt="SGW TP Full Set" class="tool-img">
+                <div class="card-body">
+                    <h3>SGW TP Full Set</h3>
+                    <p>Complete SGW TP tooling kit for batch production and export quality.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20SGW%20TP%20Full%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="SGW TP Pincer">
+                <img src="SGW%20TP%20Pincer.jpeg" alt="SGW TP Pincer" class="tool-img">
+                <div class="card-body">
+                    <h3>SGW TP Pincer</h3>
+                    <p>Pincer tooling for secure link closing and shaping operations.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20SGW%20TP%20Pincer." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Sisma SGM Facon">
+                <img src="Sisma%20SGM%20Facon.jpeg" alt="Sisma SGM Facon" class="tool-img">
+                <div class="card-body">
+                    <h3>Sisma SGM Facon</h3>
+                    <p>SGM facon set for detailed chain edge shaping and high-quality finishes.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Sisma%20SGM%20Facon." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Sisma SGM Pincer">
+                <img src="Sisma%20SGM%20Pincer.jpeg" alt="Sisma SGM Pincer" class="tool-img">
+                <div class="card-body">
+                    <h3>Sisma SGM Pincer</h3>
+                    <p>Precision pincer set for secure link closure and fine chain handling.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Sisma%20SGM%20Pincer." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Sisma (Bismark Laser soldering tools)">
+                <img src="sisma%28bismark%20Laser%20soldering%20tools%29.jpeg" alt="Sisma Bismark Laser soldering tools" class="tool-img">
+                <div class="card-body">
+                    <h3>Sisma Bismark Laser Tools</h3>
+                    <p>Laser soldering tool set for Bismarck-style chain finishing and repairs.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Sisma%20Bismark%20Laser%20Tools." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Spiral">
+                <img src="Spiral.jpeg" alt="Spiral" class="tool-img">
+                <div class="card-body">
+                    <h3>Spiral</h3>
+                    <p>Spiral tool component for chain link forming and drafting applications.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Spiral%20tool." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Ball Die Set">
+                <img src="Ball%20Die%20Set.jpeg" alt="Ball Die Set" class="tool-img">
+                <div class="card-body">
+                    <h3>Ball Die Set</h3>
+                    <p>Ball die tooling for round gold chain link production and forming.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Ball%20Die%20Set." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
+
+            <div class="card" data-name="Capsule Hollow Ball">
+                <img src="Capsule%20Hollow%20Ball.jpeg" alt="Capsule Hollow Ball" class="tool-img">
+                <div class="card-body">
+                    <h3>Capsule Hollow Ball</h3>
+                    <p>Hollow ball tool for capsule-style chain link and bead forming.</p>
+                    <a href="https://wa.me/919719411537?text=Hello,%20I%20am%20interested%20in%20the%20Capsule%20Hollow%20Ball%20tool." class="btn-wa"><i class="fab fa-whatsapp"></i> Inquire Now</a>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="pdf-section">
-        <a href="BMT-Catalog-2026.pdf" download class="btn-pdf">
-            <i class="fas fa-file-pdf"></i> DOWNLOAD FULL PRICE LIST (PDF)
-        </a>
     </div>
 
     <script>

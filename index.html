@@ -110,10 +110,12 @@
         
         .product-image {
             width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-bottom: 1px solid #333;
-            background: #161616;
+            height: 260px;
+            object-fit: contain;
+            object-position: center;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+            display: block;
         }
 
         .card-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
@@ -131,18 +133,31 @@
 
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; z-index: 2000; text-decoration: none; }
 
-        /* Export Certification Section */
-        .export-section { background: #0d0d0d; padding: 60px 5%; border-top: 1px solid #222; }
-        .export-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1100px; margin: auto; align-items: center; }
-        .cert-image-box { background: linear-gradient(135deg, #1a1a1a, #2a2a2a); border: 2px solid var(--gold); border-radius: 8px; overflow: hidden; text-align: center; min-height: 350px; display: flex; align-items: center; justify-content: center; }
-        .cert-image-box img { width: 100%; height: 100%; object-fit: contain; }
-        .export-details h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 20px; }
-        .export-details .detail-row { display: flex; align-items: flex-start; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #222; }
-        .export-details .detail-row i { color: var(--gold); font-size: 18px; margin-right: 14px; margin-top: 3px; min-width: 20px; }
-        .export-details .detail-row .label { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
-        .export-details .detail-row .value { color: #fff; font-size: 15px; margin-top: 2px; }
-        .export-badge { display: inline-block; background: var(--gold); color: #000; padding: 8px 20px; border-radius: 4px; font-weight: bold; font-size: 13px; text-transform: uppercase; margin-top: 10px; }
-        @media (max-width: 768px) { .export-wrapper { grid-template-columns: 1fr; } }
+        /* About Section */
+        .about-section { background: #0d0d0d; padding: 60px 5%; border-top: 1px solid #222; }
+        .about-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1100px; margin: auto; align-items: flex-start; }
+        .pdf-card { background: #171717; border: 1px solid #333; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+        .pdf-preview { background: linear-gradient(180deg, #111, #1c1c1c); padding: 30px; color: #fff; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; }
+        .pdf-ribbon { display: inline-block; background: var(--gold); color: #000; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .pdf-body { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+        .pdf-body i { font-size: 48px; color: #d4af37; }
+        .pdf-title { font-size: 1.4rem; color: white; font-weight: 700; }
+        .pdf-subtitle { color: #ccc; font-size: 0.95rem; }
+        .pdf-body p { color: #aaa; line-height: 1.7; max-width: 320px; }
+        .btn-pdf { display: inline-block; width: 100%; background: var(--gold); color: #000; border: none; padding: 18px; text-align: center; font-weight: bold; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; font-size: 14px; }
+        .btn-pdf:hover { background: #fff; }
+        .about-details h3 { color: var(--gold); font-size: 1.6rem; margin-bottom: 24px; }
+        .about-details .detail-row { display: flex; align-items: flex-start; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #222; }
+        .about-details .detail-row i { color: var(--gold); font-size: 18px; margin-right: 14px; margin-top: 4px; min-width: 24px; }
+        .about-details .detail-row .label { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .about-details .detail-row .value { color: #fff; font-size: 15px; margin-top: 2px; }
+        .about-details .value a { color: var(--gold); text-decoration: underline; }
+        .customer-section { margin-top: 40px; }
+        .customer-section h4 { color: #fff; margin-bottom: 16px; font-size: 1.2rem; }
+        .customer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+        .customer-card { background: #161616; border: 1px solid #262626; border-radius: 8px; padding: 16px 18px; color: #ddd; font-size: 0.95rem; }
+        .customer-card strong { color: #fff; display: block; margin-bottom: 8px; }
+        @media (max-width: 768px) { .about-wrapper, .customer-grid { grid-template-columns: 1fr; } }
 
         footer { background: #000; padding: 30px 5%; text-align: center; color: #666; font-size: 13px; }
     </style>
@@ -170,7 +185,7 @@
                     <a href="tools.html">Machine Tools (30+ Items)</a>
                 </div>
             </div>
-            <a href="#export">EXPORT</a>
+            <a href="#about">ABOUT</a>
             <a href="#contact">CONTACT</a>
             <a href="tel:+919719411537" style="color: var(--gold);"><i class="fas fa-phone-alt"></i> 9719411537</a>
         </div>
@@ -191,74 +206,143 @@
 
     <div class="container" id="machines-preview">
         <h2>Gold Chain Machine Tools</h2>
-        <p style="color:#ccc; max-width:840px; margin-bottom:30px;">Braj Machine Tools supplies gold chain machine tools, spare parts and precision equipment for jewellery manufacturers. Our Agra-based machinery is designed for high-speed chain weaving, hammering, shaping and diamond cutting.</p>
+        <p style="color:#ccc; max-width:840px; margin-bottom:30px;">Braj Machine Tools supplies gold chain machinery and precision gold chain equipment for exporters and jewellery manufacturers. Our Agra-built machines are engineered for curb, anchor and Figaro link production.</p>
         <div class="grid">
-            
             <div class="card">
-                <img src="automatic-chain-weaving-machine.jpeg" alt="Automatic Gold Chain Weaving Machine" class="product-image">
+                <img src="Curb%28Anchor%29%20Chain%20Machine.jpeg" alt="Curb Anchor Chain Machine" class="product-image">
                 <div class="card-body">
                     <div>
-                        <h3>Automatic Chain Weaving Machine</h3>
+                        <h3>Curb / Anchor Chain Machine</h3>
                         <ul>
-                            <li>High-speed continuous mechanical link weaving</li>
-                            <li>Optimized wire feeding for minimal gold scrap</li>
-                            <li>Engineered for Curb, Cable, and Bismarck profiles</li>
+                            <li>Reliable curb and anchor link production</li>
+                            <li>Stable wire feed for continuous chain weaving</li>
+                            <li>Designed for export-quality jewellery manufacture</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Automatic%20Chain%20Weaving%20Machine." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
+                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Curb%20Anchor%20Chain%20Machine." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="chain-hammering-shaping-machine.jpeg" alt="Precision Chain Hammering & Compacting Machine" class="product-image">
+                <img src="Figaro%20Chain%20Machine.jpeg" alt="Figaro Chain Machine" class="product-image">
                 <div class="card-body">
                     <div>
-                        <h3>Chain Hammering &amp; Shaping Machine</h3>
+                        <h3>Figaro Chain Machine</h3>
                         <ul>
-                            <li>Controlled high-frequency impact cycles</li>
-                            <li>Flawless flattening and compacting calibration</li>
-                            <li>Heavy-duty core components for prolonged uptime</li>
+                            <li>Precise Figaro pattern link manufacture</li>
+                            <li>Adjustable pitch and width settings</li>
+                            <li>Built for high-output export workflows</li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Chain%20Hammering%20Machine." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
+                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Figaro%20Chain%20Machine." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="multi-axis-diamond-cutting-machine.jpeg" alt="Multi-Axis Diamond Cutting Jewelry Machine" class="product-image">
-                <div class="card-body">
-                    <div>
-                        <h3>Multi-Axis Diamond Cutting Machine</h3>
-                        <ul>
-                            <li>High-speed diamond tooling tool spindle head</li>
-                            <li>Creates ultra-reflective geometric facets on links</li>
-                            <li>Zero-vibration bed system for extreme precision</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Multi-Axis%20Diamond%20Cutting%20Machine." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
-                </div>
-            </div>
-
         </div>
     </div>
 
     <div class="container" id="tools-preview" style="background: #161616;">
         <h2>Precision Machine Tools</h2>
+        <p style="color:#ccc; max-width:840px; margin-bottom:30px;">Precision tooling and machine accessories for gold chain production — from tool sets to dies, cutters and forming blocks.</p>
         <div class="grid">
             <div class="card">
-                <div class="product-image" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);color:var(--gold);font-weight:bold;font-size:14px;text-align:center;padding:20px;">
-                    <div><i class="fas fa-wrench" style="font-size:40px;display:block;margin-bottom:10px;"></i>Sisma / Ombi / Fasti Tool Set</div>
-                </div>
+                <img src="Sisma%20SGW%20Tool%20Set.jpeg" alt="Sisma SGW Tool Set" class="product-image">
                 <div class="card-body">
-                    <h3>Sisma / Ombi / Fasti Set</h3>
-                    <ul>
-                        <li><b>Complete Set</b></li>
-                        <li><b>Scroll</b></li>
-                    </ul>
-                    <a href="https://wa.me/919719411537" class="btn-enquire">Enquire Now</a>
+                    <div>
+                        <h3>Sisma SGW Tool Set</h3>
+                        <ul>
+                            <li>Complete SGW tooling package for chain forming</li>
+                            <li>High-precision guides and blades</li>
+                            <li>Ready for Sisma and compatible machines</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Sisma%20SGW%20Tool%20Set." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
                 </div>
             </div>
+
+            <div class="card">
+                <img src="FMV%20Box%20Full%20Set.jpeg" alt="FMV Box Full Set" class="product-image">
+                <div class="card-body">
+                    <div>
+                        <h3>FMV Box Full Set</h3>
+                        <ul>
+                            <li>Complete FMV tooling set for chain finishing</li>
+                            <li>Includes jaws, punches and forming components</li>
+                            <li>Engineered for gold jewellery export quality</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20FMV%20Box%20Full%20Set." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
+                </div>
             </div>
+
+            <div class="card">
+                <img src="Ball%20Die%20Set.jpeg" alt="Ball Die Set" class="product-image">
+                <div class="card-body">
+                    <div>
+                        <h3>Ball Die Set</h3>
+                        <ul>
+                            <li>Precision ball die tooling for spherical link shapes</li>
+                            <li>Durable steel construction for long runs</li>
+                            <li>Optimized for gold chain forming machines</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/919719411537?text=Hi%20BMT,%20I%20am%20interested%20in%20the%20Ball%20Die%20Set." class="btn-enquire" target="_blank"><i class="fab fa-whatsapp"></i> Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section" id="about">
+        <div class="about-wrapper">
+            <div class="pdf-card">
+                <div class="pdf-preview">
+                    <div class="pdf-ribbon">Export Certificate</div>
+                    <div class="pdf-body">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="pdf-title">IEC Export Certificate</div>
+                        <div class="pdf-subtitle">Braj Machine Tools</div>
+                        <p>Official export certification that supports our shipments and shows we are a trusted supplier for global jewellery exporters.</p>
+                    </div>
+                </div>
+                <a href="certificate%20of%20IEC%20Braj%20Machine%20Tools.pdf" target="_blank" class="btn-pdf">View PDF Certificate</a>
+            </div>
+            <div class="about-details">
+                <h3>About BMT Agra</h3>
+                <div class="detail-row">
+                    <i class="fas fa-file-export"></i>
+                    <div>
+                        <div class="label">Export Certificate</div>
+                        <div class="value">IEC Export Certificate for Braj Machine Tools</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <i class="fas fa-id-card"></i>
+                    <div>
+                        <div class="label">GSTIN</div>
+                        <div class="value">09AYCPS8159G1ZW</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <div class="label">Address</div>
+                        <div class="value">Agra, Uttar Pradesh, India</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <i class="fas fa-map"></i>
+                    <div>
+                        <div class="label">Map</div>
+                        <div class="value"><a href="https://maps.app.goo.gl/pH9AsEf3WAq6hj7bA" target="_blank">View location on Google Maps</a></div>
+                    </div>
+                </div>
+                <div class="customer-section">
+                    <h4>Our Customers</h4>
+                    <div class="customer-grid">
+                        <div class="customer-card"><strong>Emerald Jewellers</strong> Coimbatore - Premium jewellery manufacturing with our precision chain machines.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <section class="contact-section" id="contact">
@@ -298,7 +382,7 @@
 
     <footer>
         <div style="color: var(--gold); font-weight: bold;">BMT | BRAJ MACHINE TOOLS</div>
-        <div>Agra, India | Phone: 9719411537</div>
+        <div>Agra, India | Phone: 9719411537 | GSTIN: 09AYCPS8159G1ZW</div>
         <div style="margin-top: 10px; opacity: 0.5;">&copy; 2026 BMT Agra. All Rights Reserved.</div>
     </footer>
 
